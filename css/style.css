@@ -228,3 +228,23 @@ button {
   }
 
 }
+
+
+.menu-div::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+.menu-div::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.menu-div::-webkit-scrollbar-thumb {
+  background-color: #980000;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+.menu-div::-webkit-scrollbar-thumb:hover {
+  background-color: #700000;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - McDonald's</title>
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css"> <!-- Link to your existing CSS -->
+    <link rel="stylesheet" href="./css/menu.css"> <!-- Link to your existing CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-inner d-flex align-items-center">
+            <a href="./index.html">
+                <img src="assets/logo.png" alt="" height="60px" />
+            </a>
+            <div class="nav-container">
+
+                <div class="navbar">
+                    <div>
+                        <a href="">Careers</a>
+                        <a href="">Contact Us</a>
+                    </div>
+
+                    <div class="d-flex nav-inner">
+                        <button class="btn">
+                            <img src="assets/search.png" alt="" height="15px">
+                            Search
+                        </button>
+                        <button class="btn">
+                            <img src="assets/gps.png" alt="" height="20px">
+                            Locate Me
+                        </button>
+                        <button class="btn btn-warning">Order on McDelivery</button>
+                    </div>
+
+                </div>
+
+                <div class="navbar nav-2">
+                    <a href="menu.html" class="active">Our Menu</a>
+                    <a href="">About our food</a>
+                    <a href="">Your Right to Know</a>
+                    <a href="">Our App</a>
+                    <a href="">Family</a>
+                    <a href="">Trending Now</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="header-mobile justify-content-between align-items-center p-2">
+        <div>
+            <img src="assets/logo.png" alt="" height="25px" class="mx-1">
+            <img src="assets/menu.png" alt="" height="25px" class="mx-1">
+        </div>
+        <button class="btn btn-warning">Order on McDelivery</button>
+    </div>
+
+    <div class="content-container">
+        <h2 class="my-2 text-center">Our Menu</h2>
+
+        <div class="content-div">
+
+            <div class="menu-div row justify-content-center">
+                <div class="col-6 col-12-sm mb-3" id="food-item-template" style="display: none;">
+                    <div class="menu-item">
+                        <img src="" class="item-img">
+                        <div class="d-flex flex-column">
+                            <h5 class="item-name">loading</h5>
+                            <p class="item-desc">loading</p>
+                            <p class="item-price">loading</p>
+                            <button class="add-to-cart"> <i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart">
+                <ul class="list-group" id="cart-items">
+
+                </ul>
+                <div id="cart-total" class="cart-total font-weight-bold">
+                </div>
+                <button type="submit" class="btn btn-warning checkout-btn" id="viewOrderSummary">View Order
+                    Summary</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Order Summary Popup -->
+    <div class="order-summary-container" id="orderSummary" style="visibility: hidden;">
+
+        <div>
+            <div class="summary-header mt-2">
+                <h4 class="text-center">Order Summary</h4>
+                <button class="btn btn-secondary cancel-btn" id="cancelBtn">Cancel</button>
+            </div>
+            <hr>
+            <table class="order-table">
+                <tbody id="itemList">
+                </tbody>
+            </table>
+            <hr>
+            <div class="total-qty">Total Quantity <span id="totalQty"></span></div>
+        </div>
+        <div>
+            <div class="total-value">Total: <span id="totalValue"></span></div>
+            <button class="btn btn-warning order-btn" id="placeOrder">Place Order</button>
+        </div>
+    </div>
+
+    <div class="overlay" style="visibility: hidden;"></div>
+
+    <div class="confirmation-modal" id="confirmationModal" style="visibility: hidden;">
+        Thank you for your order!
+        <i class="fa fa-check-circle"></i>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <table class=" table table-borderless">
+                <thead>
+                    <tr class="header-row">
+                        <th>Our Company</th>
+                        <th>Careers</th>
+                        <th>Contact Us</th>
+                        <th>NewsRoom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Our Community</td>
+                        <td>Corporate</td>
+                        <td>Suggestion</td>
+                        <td>Local</td>
+                    </tr>
+                    <tr>
+                        <td>Our Journey</td>
+                        <td>Restaurant</td>
+                        <td>Complaint</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Our History</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="footer-mobile">
+                <div class="d-flex flex-column align-items-stretch">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="m-0">Our Company</h5>
+                        <button class="btn btn-light">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="m-0">Careers</h5>
+                        <button class="btn btn-light">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="m-0">Contact Us</h5>
+                        <button class="btn btn-light">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="m-0">NewsRoom</h5>
+                        <button class="btn btn-light">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="d-flex mb-3 mb-md-0">
+                    <button class="social-button">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fa fa-music" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div>
+                    <img src="assets/app_store_badge.png" alt="" class="me-2">
+                    <img src="assets/google_play_badge.png" alt="">
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="navbar d-flex flex-column flex-md-row">
+                    <a href="" class="mb-2 mb-md-0 me-md-3">Contact</a>
+                    <a href="" class="mb-2 mb-md-0 me-md-3">Privacy Policy</a>
+                    <a href="" class="mb-2 mb-md-0">Terms & Conditions</a>
+                </div>
+
+                <div class="d-flex align-items-center testing mt-2 mt-md-0">
+                    <img src="assets/logo.png" alt="" height="15px" class="me-2">
+                    <p class="my-0 mx-2">©2024 McDonald's. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="scripts/script.js">
+
+    </script>
+</body>
+
+</html>
